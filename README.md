@@ -10,3 +10,5 @@ Dataset: 3 features and 1 target variable.
 Model Name: Linear Regression
 
 Web App Deployment framework: flask
+
+python version used: 3.8.6
