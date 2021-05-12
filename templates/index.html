@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{
+  font-family: Calibri, Helvetica, sans-serif;
+  background-color: pink;
+}
+.container {
+    padding: 50px;
+  background-color: lightblue;
+}
+
+input[type=text], textarea {
+  width: 50%;
+  padding: 9px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+input[type=text]:focus {
+  background-color: #FFF59D;
+  outline: none;
+}
+ div {
+            padding: 10px 0;
+         }
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+.predictbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 25%;
+  opacity: 0.9;
+}
+.registerbtn:hover {
+  opacity: 1;
+}
+</style>
+</head>
+<body>
+<form action="{{ url_for('predict')}}" method="post">
+  <div class="container">
+  <center>  <h1>Predicting Sales Outcome For Different Budgets</h1> </center>
+  <hr>
+
+<label> <b>TV Ad Budget: </b></label>
+<input type="text" name="tv" placeholder= "Enter TV Ad Budget in Dollars($)" size="15" required />
+<br>
+<label> <b>Radio Ad Budget: </b></label>
+<input type="text" name="radio" placeholder= "Enter Radio Ad Budget in Dollars($)" size="15" required />
+<br>
+<label> <b>Newspaper Ad Budget: </b></label>
+<input type="text" name="newspaper" placeholder= "Enter Newspaper Ad Budget in Dollars($)" size="15" required />
+<br><br>
+    <button id="sub" type="submit" class="predictbtn">Predict</button>
+    <br><br><h3>{{ prediction_text }}</h3>
+</div>
+</form>
+
+</body>
+</html>
