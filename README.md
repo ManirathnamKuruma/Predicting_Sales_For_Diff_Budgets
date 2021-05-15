@@ -11,4 +11,8 @@ Model Name: Linear Regression
 
 Web App Deployment framework: flask
 
-python version used: 3.8.6
+conda environment with python version: 3.8
+
+anaconda version: 2021.05 with python version: 3.8.8
+
+pycharm version: 2021.1.1
